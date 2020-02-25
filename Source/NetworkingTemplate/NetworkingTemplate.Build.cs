@@ -32,8 +32,8 @@ public class NetworkingTemplate : ModuleRules
 			     // Added
 			      "AdvancedSessions"     ,
 				  "AdvancedSteamSessions",
-				  //"VRExpansionPlugin"    ,
-                  //"OpenVRExpansionPlugin",
+				  "VRExpansionPlugin"    ,
+                  "OpenVRExpansionPlugin",
 
 				 // Networking
 					"Networking"          ,
@@ -66,16 +66,16 @@ public class NetworkingTemplate : ModuleRules
 		        }
             );
 
-            /* VR Required Modules */
-            //if (Target.Platform == UnrealTargetPlatform.Win64)
-            //{
-            //    PrivateDependencyModuleNames.AddRange(new string[] { "SteamVR", "SteamVRController" });
-            //}
-            //else
-            //{
-            //    PrivateDependencyModuleNames.AddRange(new string[] { });
-            //}
+        /* VR Required Modules */
+        if (Target.Platform == UnrealTargetPlatform.Win64)
+        {
+            PrivateDependencyModuleNames.AddRange(new string[] { "SteamVR", "SteamVRController" });
         }
+        else
+        {
+            PrivateDependencyModuleNames.AddRange(new string[] { });
+        }
+    }
 
 		// Uncomment if you are using Slate UI
 		//PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
