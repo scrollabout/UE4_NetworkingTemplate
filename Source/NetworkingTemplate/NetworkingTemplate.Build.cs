@@ -38,7 +38,7 @@ public class NetworkingTemplate : ModuleRules
 				 // Networking
 					"Networking"          ,
                     "OnlineSubsystem"     ,
-					"OnlineSubsystemNull" ,
+					//"OnlineSubsystemNull" ,
                     "OnlineSubsystemUtils",
                     "Sockets"             ,
 					"Steamworks"
