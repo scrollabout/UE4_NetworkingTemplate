@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class NETWORKINGTEMPLATE_API UNT_NetSettings : public UNetworkSettings
 {
 	GENERATED_BODY()
